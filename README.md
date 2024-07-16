@@ -12,7 +12,7 @@ This is a solution to the [Recipe page challenge on Frontend Mentor](https://www
 
 ### Links
 
-- Solution URL: [will add soon](https://your-solution-url.com)
+- Solution URL: [https://www.frontendmentor.io/solutions/frontend-mentor---recipe-page-BS1jvew7In](https://www.frontendmentor.io/solutions/frontend-mentor---recipe-page-BS1jvew7In)
 - Live Site URL: [https://dev-paull.github.io/recipe-page](https://dev-paull.github.io/recipe-page)
 
 ## My process
