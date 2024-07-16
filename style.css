@@ -77,6 +77,11 @@ main {
     margin-bottom: .5rem;
 }
 
+::marker {
+    color: var(--nutmeg);
+    font-weight: 600;
+}
+
 .recipe-boldtext {
     font-weight: 600;
     color: var(--darkCharcoal);
