@@ -78,8 +78,8 @@ main {
 }
 
 .omelette-recipe li p {
-    margin-left: 1.5rem;
     display: inline;
+    margin-left: 1rem;
 }
 
 ::marker {
