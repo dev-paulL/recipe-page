@@ -43,7 +43,7 @@ main {
 /* Recipe component */
 .omelette-recipe {
     max-width: 60rem;
-    width: 85vw;
+   /*  width: 85vw; */
     display: flex;
     flex-flow: column;
     background-color: var(--white);
