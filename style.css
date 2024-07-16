@@ -77,9 +77,14 @@ main {
     margin-bottom: .5rem;
 }
 
+.omelette-recipe li p {
+    margin-left: 1.5rem;
+    display: inline;
+}
+
 ::marker {
     color: var(--nutmeg);
-    font-weight: 600;
+    font-weight: 600;    
 }
 
 .recipe-boldtext {
