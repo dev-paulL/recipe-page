@@ -157,7 +157,13 @@ footer a {
    .omelette-recipe {
         width: 100vw;
         max-width: 100%;
+        min-height: 100vh;
         border-radius: 0rem;
+        margin:0;
+   }
+
+   main {
+    padding:0;
    }
 
 
