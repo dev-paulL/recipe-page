@@ -30,5 +30,5 @@ This is a solution to the [Recipe page challenge on Frontend Mentor](https://www
 
 ### Continued development
 
-I completed this challenge relatively quickly and achieved a design that closely resembles the original (without access to any Figma files, only based on screenshots). However, I had to do some research on how to style lists and couldn't recall the exact method for styling tables.
+I completed this challenge relatively quickly and achieved a design that closely resembles the original (without access to any Figma files, only based on screenshots). However, I couldn't recall how to style lists and tables correctly, I had to read docs.
 
