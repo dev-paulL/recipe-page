@@ -1,2 +1,2 @@
-+read about list styling
-+read about tables
++ read about list styling
++ read about tables

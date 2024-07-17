@@ -3,168 +3,194 @@
 :root {
     --nutmeg: hsl(14, 45%, 36%);
     --darkRaspberry: hsl(332, 51%, 32%);
-
+  
     --white: hsl(0, 0%, 100%);
     --roseWhite: hsl(330, 100%, 98%);
     --eggshell: hsl(30, 54%, 90%);
     --lightGrey: hsl(30, 18%, 87%);
     --wengeBrown: hsl(30, 10%, 34%);
     --darkCharcoal: hsl(24, 5%, 18%);
-}
-
-* {
+  }
+  
+  * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-}
-
-html, body {
+  }
+  
+  html,
+  body {
     height: 100%;
     width: 100%;
-}
-
-/* Body & main */
-body {
+  }
+  
+  /* Body & main */
+  body {
     font-size: 1rem;
     min-height: 100vh;
     font-family: 'Outfit', sans-serif;
-}
-
-main {
+  }
+  
+  main {
     padding: 3rem 0;
     min-height: 98vh;
     background-color: var(--eggshell);
     display: flex;
     justify-content: center;
-    align-items:center;
-    flex-flow: column;   
-}
-
-/* Recipe component */
-.omelette-recipe {
+    align-items: center;
+    flex-flow: column;
+  }
+  
+  /* Recipe component */
+  .omelette-recipe {
     max-width: 60rem;
-   /*  width: 85vw; */
+    /*  width: 85vw; */
     display: flex;
     flex-flow: column;
     background-color: var(--white);
-    padding: 2.5rem;
     border-radius: 1.5rem;
-}
-
-.recipe-title {
+  }
+  
+  .recipe-title {
     font-family: 'Young Serif', serif;
     font-size: 2.8rem;
     color: var(--darkCharcoal);
-    margin: 1.5rem 0;
+    margin-bottom: 1.5rem;
     font-weight: 400;
-}
-
-.recipe-presentation img {
+  }
+  
+  .recipe-content {
+    padding: 0 2.5rem;
+    display: flex;
+    flex-flow: column wrap;
+  }
+  
+  figure {
+    padding: 2.5rem;
+  }
+  
+  .recipe-image {
     max-width: 100%;
+    min-width: 100%;
     border-radius: 1rem;
-}
-
-.omelette-recipe ul, .omelette-recipe ol {
-    list-style-position: inside;
-}
-
-.omelette-recipe p, .omelette-recipe li {
+  }
+  
+  .omelette-recipe ul {
+    list-style: disc;
+  }
+  
+  .omelette-recipe p,
+  .omelette-recipe li {
     font-size: 1.4rem;
     line-height: 1.7;
-}
-
-.omelette-recipe li {
+  }
+  
+  .omelette-recipe li {
     margin-bottom: .5rem;
-}
-
-.omelette-recipe li p {
-    display: inline;
-    margin-left: 1.3rem;
-}
-
-::marker {
+    padding-left: 1.2rem;
+    margin-left: 1.5rem;
+    margin-block: .5rem;
+  }
+  
+  .omelette-recipe ol {
+    list-style: decimal;
+  }
+  
+  ::marker {
     color: var(--nutmeg);
-    font-weight: 600;    
-}
-
-.recipe-boldtext {
+    font-weight: 600;
+  }
+  
+  .recipe-boldtext {
     font-weight: 600;
     color: var(--darkCharcoal);
-}
-
-.recipe-prepTime {
+  }
+  
+  .recipe-prepTime {
     background-color: var(--roseWhite);
     padding: 1.5rem;
     border-radius: 1rem;
     margin: 1.5rem 0;
     line-height: 1.7;
-}
-.recipe-prepTime h5 {
+  }
+  
+  .recipe-prepTime h5 {
     font-size: 1.5rem;
     color: var(--darkRaspberry);
     padding-bottom: .5rem;
-}
-
-.omelette-recipe h3 {
+  }
+  
+  .omelette-recipe h3 {
     font-size: 2rem;
     font-family: 'Young Serif', serif;
     color: var(--nutmeg);
     font-weight: 400;
     padding: 1rem 0;
-}
-
-.separator {
-   border-bottom: 1px solid var(--lightGrey);
-   margin: 2rem 0;
-}
-
-/* Nutrition table, did I get the right approach? */
-.recipe-nutrition table {
+  }
+  
+  .separator {
+    border-bottom: 1px solid var(--lightGrey);
+    margin: 2rem 0;
+  }
+  
+  /* Nutrition table, did I get the right approach? */
+  .recipe-nutrition table {
     border-collapse: collapse;
     width: 90%;
     font-size: 1.3rem;
     margin: 1rem auto;
     border-spacing: 0;
-}
-
-tr { 
+  }
+  
+  tr {
     border-bottom: 1px solid var(--lightGrey);
-}
-
-td {
+  }
+  
+  td {
     padding: 1rem 2rem;
-}
-
-.recipe-nutrition_quantity {
+  }
+  
+  .recipe-nutrition_quantity {
     color: var(--nutmeg);
     font-weight: 700;
-}
-
-/* Footer part, should maybe remove it in next projects */
-footer {
+  }
+  
+  /* Footer part, should maybe remove it in next projects */
+  footer {
     text-align: center;
     background-color: var(--eggshell);
-}
-
-footer a {
+  }
+  
+  footer a {
     font-weight: 600;
     color: var(--darkRaspberry);
-}
-
-/* Media queries */
-@media only screen and (min-width : 20rem) and (max-width : 30rem) {
+  }
+  
+  /* Media queries */
+  @media only screen and (max-width : 43.75rem) {
+  
     /* (in the provided screenshot from ./design, we see that the article's width is becoming 100% on mobile device)  */
-   .omelette-recipe {
-        width: 100vw;
-        max-width: 100%;
-        min-height: 100vh;
-        border-radius: 0rem;
-        margin:0;
-   }
-
-   main {
-    padding:0;
-   }
-
-
-}
+    .omelette-recipe {
+      width: 100vw;
+      max-width: 100%;
+      min-height: 100vh;
+      border-radius: 0rem;
+      margin: 0;
+    }
+  
+    main {
+      padding: 0;
+    }
+  
+    .omelette-recipe img {
+      border-radius: 0;
+      padding: 0;
+    }
+  
+    figure {
+      padding: 0;
+      margin-bottom: 2.5rem;
+    }
+  
+  }
+  
