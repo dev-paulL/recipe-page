@@ -1,196 +1,187 @@
-/* Defining colors & reset */
-
 :root {
-    --nutmeg: hsl(14, 45%, 36%);
-    --darkRaspberry: hsl(332, 51%, 32%);
-  
-    --white: hsl(0, 0%, 100%);
-    --roseWhite: hsl(330, 100%, 98%);
-    --eggshell: hsl(30, 54%, 90%);
-    --lightGrey: hsl(30, 18%, 87%);
-    --wengeBrown: hsl(30, 10%, 34%);
-    --darkCharcoal: hsl(24, 5%, 18%);
-  }
-  
-  * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-  }
-  
-  html,
-  body {
-    height: 100%;
-    width: 100%;
-  }
-  
-  /* Body & main */
-  body {
-    font-size: 1rem;
-    min-height: 100vh;
-    font-family: 'Outfit', sans-serif;
-  }
-  
-  main {
-    padding: 3rem 0;
-    min-height: 98vh;
-    background-color: var(--eggshell);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-flow: column;
-  }
-  
-  /* Recipe component */
+  --nutmeg: hsl(14, 45%, 36%);
+  --darkRaspberry: hsl(332, 51%, 32%);
+  --white: hsl(0, 0%, 100%);
+  --roseWhite: hsl(330, 100%, 98%);
+  --eggshell: hsl(30, 54%, 90%);
+  --lightGrey: hsl(30, 18%, 87%);
+  --wengeBrown: hsl(30, 10%, 34%);
+  --darkCharcoal: hsl(24, 5%, 18%);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  font-size: 1rem;
+  min-height: 100vh;
+  font-family: "Outfit", sans-serif;
+  font-weight:400;
+}
+
+main {
+  padding: 3rem 0;
+  min-height: 98vh;
+  background-color: var(--eggshell);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+}
+
+/* Recipe component */
+.omelette-recipe {
+  max-width: 45rem;
+  display: flex;
+  flex-flow: column;
+  background-color: var(--white);
+  border-radius: 1.5rem;
+}
+
+.recipe-title {
+  font-family: "Young Serif", serif;
+  font-size: 2.3rem;
+  color: var(--darkCharcoal);
+  margin-bottom: 1.5rem;
+  font-weight: 400;
+}
+
+.recipe-content {
+  padding: 0 2.5rem;
+  display: flex;
+  flex-flow: column wrap;
+}
+
+figure {
+  padding: 2.5rem;
+}
+
+.recipe-image {
+  max-width: 100%;
+  min-width: 100%;
+  border-radius: 1rem;
+}
+
+.omelette-recipe ul {
+  list-style: disc;
+}
+
+.omelette-recipe p,
+.omelette-recipe li {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.omelette-recipe li {
+  margin-bottom: 0.5rem;
+  padding-left: 1.2rem;
+  margin-left: 1.5rem;
+  margin-block: 0.5rem;
+}
+
+.omelette-recipe ol {
+  list-style: decimal;
+}
+
+::marker {
+  color: var(--nutmeg);
+  font-weight: 600;
+}
+
+strong {
+  font-weight: 600;
+  color: var(--darkCharcoal);
+}
+
+.recipe-prepTime {
+  background-color: var(--roseWhite);
+  padding: 1.5rem;
+  border-radius: 1rem;
+  margin: 1.5rem 0;
+  line-height: 1.7;
+}
+
+.recipe-prepTime h2 {
+  font-size: 1.5rem;
+  color: var(--darkRaspberry);
+  padding-bottom: 0.5rem;
+}
+
+.omelette-recipe h3 {
+  font-size: 2rem;
+  font-family: "Young Serif", serif;
+  color: var(--nutmeg);
+  font-weight: 400;
+  padding: 1rem 0;
+}
+
+.separator {
+  border-bottom: 1px solid var(--lightGrey);
+  margin: 2rem 0;
+}
+
+.recipe-nutrition table {
+  border-collapse: collapse;
+  width: 90%;
+  font-size: 1.3rem;
+  margin: 1rem auto;
+  border-spacing: 0;
+}
+
+tr {
+  border-bottom: 1px solid var(--lightGrey);
+}
+
+td {
+  padding: 1rem 2rem;
+}
+
+.recipe-nutrition_quantity {
+  color: var(--nutmeg);
+  font-weight: 700;
+}
+
+footer {
+  text-align: center;
+  background-color: var(--eggshell);
+}
+
+footer a {
+  font-weight: 600;
+  color: var(--darkRaspberry);
+}
+
+
+@media only screen and (max-width: 43.75rem) {
+  /* (in the provided screenshot from ./design, we see that the article's width is becoming 100% on mobile device)  */
   .omelette-recipe {
-    max-width: 60rem;
-    /*  width: 85vw; */
-    display: flex;
-    flex-flow: column;
-    background-color: var(--white);
-    border-radius: 1.5rem;
-  }
-  
-  .recipe-title {
-    font-family: 'Young Serif', serif;
-    font-size: 2.8rem;
-    color: var(--darkCharcoal);
-    margin-bottom: 1.5rem;
-    font-weight: 400;
-  }
-  
-  .recipe-content {
-    padding: 0 2.5rem;
-    display: flex;
-    flex-flow: column wrap;
-  }
-  
-  figure {
-    padding: 2.5rem;
-  }
-  
-  .recipe-image {
+    width: 100vw;
     max-width: 100%;
-    min-width: 100%;
-    border-radius: 1rem;
+    min-height: 100vh;
+    border-radius: 0rem;
+    margin: 0;
   }
-  
-  .omelette-recipe ul {
-    list-style: disc;
+
+  main {
+    padding: 0;
   }
-  
-  .omelette-recipe p,
-  .omelette-recipe li {
-    font-size: 1.4rem;
-    line-height: 1.7;
+
+  .omelette-recipe img {
+    border-radius: 0;
+    padding: 0;
   }
-  
-  .omelette-recipe li {
-    margin-bottom: .5rem;
-    padding-left: 1.2rem;
-    margin-left: 1.5rem;
-    margin-block: .5rem;
+
+  figure {
+    padding: 0;
+    margin-bottom: 2.5rem;
   }
-  
-  .omelette-recipe ol {
-    list-style: decimal;
-  }
-  
-  ::marker {
-    color: var(--nutmeg);
-    font-weight: 600;
-  }
-  
-  .recipe-boldtext {
-    font-weight: 600;
-    color: var(--darkCharcoal);
-  }
-  
-  .recipe-prepTime {
-    background-color: var(--roseWhite);
-    padding: 1.5rem;
-    border-radius: 1rem;
-    margin: 1.5rem 0;
-    line-height: 1.7;
-  }
-  
-  .recipe-prepTime h5 {
-    font-size: 1.5rem;
-    color: var(--darkRaspberry);
-    padding-bottom: .5rem;
-  }
-  
-  .omelette-recipe h3 {
-    font-size: 2rem;
-    font-family: 'Young Serif', serif;
-    color: var(--nutmeg);
-    font-weight: 400;
-    padding: 1rem 0;
-  }
-  
-  .separator {
-    border-bottom: 1px solid var(--lightGrey);
-    margin: 2rem 0;
-  }
-  
-  /* Nutrition table, did I get the right approach? */
-  .recipe-nutrition table {
-    border-collapse: collapse;
-    width: 90%;
-    font-size: 1.3rem;
-    margin: 1rem auto;
-    border-spacing: 0;
-  }
-  
-  tr {
-    border-bottom: 1px solid var(--lightGrey);
-  }
-  
-  td {
-    padding: 1rem 2rem;
-  }
-  
-  .recipe-nutrition_quantity {
-    color: var(--nutmeg);
-    font-weight: 700;
-  }
-  
-  /* Footer part, should maybe remove it in next projects */
-  footer {
-    text-align: center;
-    background-color: var(--eggshell);
-  }
-  
-  footer a {
-    font-weight: 600;
-    color: var(--darkRaspberry);
-  }
-  
-  /* Media queries */
-  @media only screen and (max-width : 43.75rem) {
-  
-    /* (in the provided screenshot from ./design, we see that the article's width is becoming 100% on mobile device)  */
-    .omelette-recipe {
-      width: 100vw;
-      max-width: 100%;
-      min-height: 100vh;
-      border-radius: 0rem;
-      margin: 0;
-    }
-  
-    main {
-      padding: 0;
-    }
-  
-    .omelette-recipe img {
-      border-radius: 0;
-      padding: 0;
-    }
-  
-    figure {
-      padding: 0;
-      margin-bottom: 2.5rem;
-    }
-  
-  }
-  
+}
